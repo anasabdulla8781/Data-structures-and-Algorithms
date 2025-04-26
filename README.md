@@ -1,7 +1,7 @@
 # Data-structures-and-Algorithms
 this is the global repository for datastructures and algorithms
 
-STEPS TO CONFIGURE 
+---------------------------------    STEPS TO CONFIGURE THE REPOSITORY  ---------------------------- 
 
     1 - Do <git init>
     2 - Now we will have a master branch in local , but in remote repo we will be usually in main branch. its always good to have the same branch names in local and remote . so we need to rename the loacl branch to main . Do <git branch -m master main>
