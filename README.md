@@ -12,7 +12,7 @@ this is the global repository for datastructures and algorithms
     6 - Perform <git pull origin main>
 
 
-    --------------------------      STEPS TO DO THE MODIFICATOINS IN MAIN BRANCH      ----------------------------------
+--------------------------      STEPS TO DO THE MODIFICATOINS IN MAIN BRANCH     ----------------------------------
     1 - We will be in main now . we whatever the modifications we did , it will be on main now . After the modifications do <git status> - this will give whether anything is not commited there or not 
     2 - do <git add "filename"> to include the particular file or <git add .> to include all the files
     3 - Perform <git commit -m "the message for the commit">
