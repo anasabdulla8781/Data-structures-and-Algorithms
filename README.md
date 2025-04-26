@@ -10,3 +10,10 @@ this is the global repository for datastructures and algorithms
     4 - Perform <git remote add origin "https://github.com/anasabdulla8781/Data-structures-and-Algorithms.git">
     5 - perform <git reset --hard>. this will remove all the changes we made in the local repo ( so that syncing from the remote will be much easier )
     6 - Perform <git pull origin main>
+
+
+    --------------------------      STEPS TO DO THE MODIFICATOINS IN MAIN BRANCH      ----------------------------------
+    1 - We will be in main now . we whatever the modifications we did , it will be on main now . After the modifications do <git status> - this will give whether anything is not commited there or not 
+    2 - do <git add "filename"> to include the particular file or <git add .> to include all the files
+    3 - Perform <git commit -m "the message for the commit">
+    3 - Perform <git push origin main> . this will push all the commited changes from the main to main of the origin 
