@@ -81,9 +81,17 @@ void insert_node_location (int data , int location)
             temp = temp->next;
             i++;
         }
-    
-        new->next = temp->next;
-        temp->next = new;
+        
+        if(temp)
+        {
+            new->next = temp->next;
+            temp->next = new;
+        }
+        else
+        {
+            insert_node(data);
+        }
+
     }
 
 }

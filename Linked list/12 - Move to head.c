@@ -139,6 +139,41 @@ void search_and_move(int data)
     }
 }
 
+void insert_node_location (int data , int location)
+{
+    struct node *new = (struct node*)malloc(sizeof(struct node));
+    new->data = data;
+    new->next = NULL;
+
+    struct node*temp = head;
+    int i = 1;
+
+    if (location == 1)
+    {
+        new->next = temp;
+        head = new;
+    }
+    else
+    {
+        while (temp && ((i+1)<location))
+        {
+            temp = temp->next;
+            i++;
+        }
+        
+        if(temp)
+        {
+            new->next = temp->next;
+            temp->next = new;
+        }
+        else
+        {
+            insert_node(data);
+        }
+
+    }
+
+}
 
 int main ()
 {
@@ -153,6 +188,7 @@ int main ()
     max_element_in_list();
     search_node_linear(6);
     search_and_move(36);
+    insert_node_location(63,58);
     display_node();
 
     return 0;
