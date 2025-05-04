@@ -88,7 +88,7 @@ void search_node_linear(int data)
     int count = 1;
     if(!head)
     {
-        printf("\nThere is no list itself");
+        printf("\nThere is no list itself\n");
     }
     else
     {
@@ -96,7 +96,7 @@ void search_node_linear(int data)
         {
             if(data == temp->data)
             {
-                printf("\nThe element is available in %dth position in list",count);
+                printf("\nThe element is available in %dth position in list\n",count);
                 break;
             }
             else
@@ -107,9 +107,35 @@ void search_node_linear(int data)
         }
         if(!temp)
         {
-            printf ("\nThere is no node with the element we searched");
+            printf ("\nThere is no node with the element we searched\n");
         }
         
+    }
+}
+
+void search_and_move(int data)
+{
+    struct node* temp = head;
+    struct node* temp2 = head;
+
+    while (temp)
+    {
+        if(temp->data == data)
+        {
+            if (temp == head)
+            {
+                break;
+            }
+            temp2->next = temp->next;
+            temp->next = head;
+            head = temp;
+            break;
+        }
+        else
+        {
+            temp2 = temp;
+            temp = temp->next;
+        }
     }
 }
 
@@ -126,6 +152,8 @@ int main ()
     sum_of_nodes();
     max_element_in_list();
     search_node_linear(6);
+    search_and_move(36);
+    display_node();
 
     return 0;
 }
