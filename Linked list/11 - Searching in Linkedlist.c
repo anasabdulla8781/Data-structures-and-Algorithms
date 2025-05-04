@@ -82,6 +82,38 @@ void max_element_in_list(void)
     
 }
 
+void search_node_linear(int data)
+{
+    struct node *temp = head;
+    int count = 1;
+    if(!head)
+    {
+        printf("\nThere is no list itself");
+    }
+    else
+    {
+        while (temp)
+        {
+            if(data == temp->data)
+            {
+                printf("\nThe element is available in %dth position in list",count);
+                break;
+            }
+            else
+            {
+                temp = temp->next;
+                count++;
+            }
+        }
+        if(!temp)
+        {
+            printf ("\nThere is no node with the element we searched");
+        }
+        
+    }
+}
+
+
 int main ()
 {
 
@@ -93,5 +125,9 @@ int main ()
     display_node();
     sum_of_nodes();
     max_element_in_list();
+    search_node_linear(6);
+
+
+
     return 0;
 }
